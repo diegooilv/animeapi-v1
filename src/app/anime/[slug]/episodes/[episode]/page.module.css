@@ -1,0 +1,121 @@
+.wrap {
+    display: grid;
+    gap: 1rem;
+}
+
+.header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.title {
+    font-size: var(--fs-hero);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: rgb(var(--muted));
+    font-size: .95em;
+    margin-top: .25rem;
+}
+
+.playerCard {
+    border: 1px solid rgba(var(--border));
+    border-radius: var(--radius);
+    background: color-mix(in oklab, rgb(var(--fg)) 5%, transparent);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: .9rem;
+}
+
+.player {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 10px;
+    outline: none;
+}
+
+.fallback {
+    display: grid;
+    gap: .75rem;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border: 0;
+    border-radius: 10px;
+    padding: .6rem .9rem;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(135deg, rgb(var(--accent)), rgb(var(--accent-700)));
+    text-decoration: none;
+    box-shadow: var(--shadow);
+}
+
+.metaArea {
+    display: grid;
+    gap: .4rem;
+}
+
+.kv {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: .5rem;
+    align-items: center;
+    font-size: .95rem;
+}
+
+.kv > span {
+    color: rgb(var(--muted));
+}
+
+.kv a {
+    color: color-mix(in oklab, rgb(var(--accent)) 80%, white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.episodeNav {
+    display: flex;
+    gap: .5rem;
+    justify-content: space-between;
+}
+
+.btnGhost {
+    padding: .6rem .9rem;
+    border-radius: 10px;
+    border: 1px solid rgba(var(--border));
+    background: color-mix(in oklab, rgb(var(--fg)) 4%, transparent);
+    color: rgb(var(--fg));
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.nav {
+    display: flex;
+    gap: .5rem;
+}
+
+.alert {
+    border: 1px solid rgba(255, 0, 0, .25);
+    background: rgba(255, 0, 0, .08);
+    color: #ff6b6b;
+    padding: .9rem 1rem;
+    border-radius: 12px;
+}
+
+.small {
+    font-size: .9rem;
+    color: rgb(var(--muted));
+}

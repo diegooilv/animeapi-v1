@@ -1,0 +1,38 @@
+.toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .5rem .75rem;
+    border-radius: 999px;
+    border: 1px solid rgba(var(--border));
+    background: color-mix(in oklab, rgb(var(--fg)) 4%, transparent);
+    color: rgb(var(--fg));
+    cursor: pointer;
+}
+
+.iconWrap {
+    position: relative;
+    width: 18px;
+    height: 18px;
+    color: color-mix(in oklab, rgb(var(--accent)) 90%, white);
+}
+
+.iconWrap > svg:last-child {
+    position: absolute;
+    inset: 0;
+    opacity: 0.0;
+    transition: opacity 160ms ease;
+}
+
+html[data-theme="dark"] .iconWrap > svg:last-child {
+    opacity: 1;
+}
+
+html[data-theme="dark"] .iconWrap > svg:first-child {
+    opacity: 0;
+}
+
+.label {
+    font-size: 0.85rem;
+    color: rgb(var(--muted));
+}

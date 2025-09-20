@@ -1,0 +1,96 @@
+/* Reset/normalize leve */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body, h1, h2, h3, p, ul {
+    margin: 0;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+:root {
+    /* Cores (light) */
+    --bg: 248 249 252;
+    --fg: 18 21 26;
+    --muted: 107 114 128;
+
+    --card: 255 255 255 / 0.6;
+    --border: 0 0 0 / 0.06;
+    --accent: 26 167 255;
+    --accent-700: 4 105 179;
+
+    --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.25);
+    --radius: 14px;
+
+    /* Tipografia fluida */
+    --fs-hero: clamp(1.5rem, 1.1rem + 1.5vw, 2.25rem);
+    --fs-body: clamp(0.95rem, 0.9rem + 0.2vw, 1rem);
+
+    color-scheme: light dark;
+}
+
+html[data-theme="dark"] {
+    --bg: 6 8 14;
+    --fg: 232 233 236;
+    --muted: 148 163 184;
+
+    --card: 255 255 255 / 0.06;
+    --border: 255 255 255 / 0.08;
+    --accent: 74 185 255;
+    --accent-700: 6 134 229;
+}
+
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme]) {
+        --bg: 6 8 14;
+        --fg: 232 233 236;
+        --muted: 148 163 184;
+
+        --card: 255 255 255 / 0.06;
+        --border: 255 255 255 / 0.08;
+        --accent: 74 185 255;
+        --accent-700: 6 134 229;
+    }
+}
+
+body {
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    font-size: var(--fs-body);
+    color: rgb(var(--fg));
+    background: rgb(var(--bg)) radial-gradient(1200px 600px at 20% -10%, rgba(26, 167, 255, 0.12), transparent 60%),
+    radial-gradient(1000px 500px at 120% 10%, rgba(4, 105, 179, 0.14), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0)) fixed;
+}
+
+.container {
+    width: min(1100px, 100% - 2rem);
+    margin-inline: auto;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

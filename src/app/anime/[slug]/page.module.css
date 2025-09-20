@@ -1,0 +1,77 @@
+.wrap {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.header {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.title {
+    font-size: var(--fs-hero);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    color: rgb(var(--muted));
+    font-size: .95em;
+    margin-top: .25rem;
+}
+
+.card {
+    border: 1px solid rgba(var(--border));
+    border-radius: var(--radius);
+    background: color-mix(in oklab, rgb(var(--fg)) 5%, transparent);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+}
+
+.sectionTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: .75rem;
+}
+
+.episodes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: .6rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.episodeLink {
+    display: block;
+    padding: .6rem .75rem;
+    border-radius: 12px;
+    border: 1px solid rgba(var(--border));
+    background: color-mix(in oklab, rgb(var(--fg)) 4%, transparent);
+    color: rgb(var(--fg));
+    text-decoration: none;
+    text-align: center;
+    font-weight: 600;
+    transition: border-color 160ms, box-shadow 160ms, transform 120ms;
+}
+
+.episodeLink:hover {
+    border-color: rgb(var(--accent));
+    box-shadow: 0 0 0 4px color-mix(in oklab, rgb(var(--accent)) 20%, transparent);
+    transform: translateY(-1px);
+}
+
+.footer {
+    color: color-mix(in oklab, rgb(var(--accent)) 80%, white);
+    font-weight: 600;
+}
+
+.footer a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}

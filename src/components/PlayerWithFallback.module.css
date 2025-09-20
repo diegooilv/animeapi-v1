@@ -1,0 +1,123 @@
+.card {
+    border: 1px solid rgba(var(--border));
+    border-radius: var(--radius);
+    background: color-mix(in oklab, rgb(var(--fg)) 5%, transparent);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    box-shadow: var(--shadow);
+    display: grid;
+    gap: .9rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: .75rem;
+}
+
+.title {
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.subtitle {
+    color: rgb(var(--muted));
+    font-size: .9rem;
+}
+
+.badge {
+    display: inline-flex;
+    gap: .3rem;
+    border: 1px solid rgba(var(--border));
+    background: color-mix(in oklab, rgb(var(--fg)) 4%, transparent);
+    padding: .35rem .6rem;
+    border-radius: 999px;
+    font-size: .85rem;
+}
+
+.player {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: 10px;
+    outline: none;
+}
+
+.loading {
+    opacity: .7;
+}
+
+.alert {
+    border: 1px solid rgba(255, 0, 0, .25);
+    background: rgba(255, 0, 0, .08);
+    color: #ff6b6b;
+    padding: .9rem 1rem;
+    border-radius: 12px;
+    display: grid;
+    gap: .5rem;
+}
+
+.small {
+    font-size: .9rem;
+    color: rgb(var(--muted));
+}
+
+.fallback {
+    display: grid;
+    gap: .75rem;
+}
+
+.btn, .btnGhost {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border-radius: 10px;
+    padding: .6rem .9rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn {
+    border: 0;
+    color: white;
+    background: linear-gradient(135deg, rgb(var(--accent)), rgb(var(--accent-700)));
+    box-shadow: var(--shadow);
+}
+
+.btnGhost {
+    border: 1px solid rgba(var(--border));
+    color: rgb(var(--fg));
+    background: color-mix(in oklab, rgb(var(--fg)) 4%, transparent);
+}
+
+.meta {
+    display: grid;
+    gap: .4rem;
+}
+
+.kv {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: .5rem;
+    align-items: center;
+    font-size: .95rem;
+}
+
+.kv > span {
+    color: rgb(var(--muted));
+}
+
+.kv a {
+    color: color-mix(in oklab, rgb(var(--accent)) 80%, white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.actions {
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-end;
+}

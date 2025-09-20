@@ -1,0 +1,36 @@
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+.card {
+    border: 1px solid rgba(var(--border));
+    border-radius: var(--radius);
+    background: color-mix(in oklab, rgb(var(--fg)) 5%, transparent);
+    overflow: hidden;
+}
+
+.media {
+    aspect-ratio: 3 / 4;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.05));
+    background-size: 200% 100%;
+    animation: shimmer 1.4s linear infinite;
+}
+
+.body {
+    padding: 12px;
+    display: grid;
+    gap: 8px;
+}
+
+.line {
+    height: 12px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.14), rgba(255, 255, 255, 0.05));
+    background-size: 200% 100%;
+    animation: shimmer 1.4s linear infinite;
+}
